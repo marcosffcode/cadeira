@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadeira de Rodas</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin:0; min-height:100%; font-family:Arial, Helvetica, sans-serif; }
+body {
+  background: linear-gradient(135deg, #f7faf8, #ffffff);
+  color:#142018;
+  overflow-x:hidden;
+}
+.screen {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:28px 18px;
+  text-align:center;
+}
+.card {
+  width:min(960px, 100%);
+  background:#fff;
+  border-radius:28px;
+  box-shadow:0 18px 60px rgba(0,0,0,.10);
+  overflow:hidden;
+  border:1px solid #edf0ee;
+}
+.header {
+  padding:30px 24px 18px;
+}
+.badge {
+  display:inline-block;
+  background:#e7f7ed;
+  color:#087b36;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.3px;
+  margin-bottom:14px;
+}
+h1 {
+  margin:0 auto 10px;
+  max-width:760px;
+  font-size:clamp(28px, 5vw, 48px);
+  line-height:1.04;
+  letter-spacing:-1.5px;
+}
+.sub {
+  margin:0 auto;
+  color:#68736c;
+  font-size:16px;
+  line-height:1.5;
+}
+.carousel {
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  padding:18px 0 24px;
+  background:#f8faf8;
+}
+.track {
+  display:flex;
+  width:max-content;
+  gap:16px;
+  animation:scroll 28s linear infinite;
+}
+.track img {
+  width:clamp(220px, 29vw, 330px);
+  height:clamp(230px, 34vw, 370px);
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  user-select:none;
+}
+@keyframes scroll {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+.question {
+  padding:26px 24px 32px;
+}
+.question h2 {
+  margin:0 0 20px;
+  font-size:clamp(22px, 4vw, 32px);
+}
+.buttons {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+button, .wa {
+  border:0;
+  cursor:pointer;
+  min-width:150px;
+  padding:16px 26px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:800;
+  transition:.2s ease;
+  text-decoration:none;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+}
+.yes {
+  background:#16a34a;
+  color:#fff;
+  box-shadow:0 8px 20px rgba(22,163,74,.25);
+}
+.no {
+  background:#eef1ef;
+  color:#263129;
+}
+button:hover, .wa:hover { transform:translateY(-2px); }
+.result {
+  display:none;
+  padding:56px 26px 62px;
+}
+.result.show { display:block; }
+.result h2 {
+  font-size:clamp(30px, 5vw, 46px);
+  margin:0 0 12px;
+}
+.result p {
+  color:#68736c;
+  font-size:18px;
+  margin:0 auto 28px;
+}
+.wa {
+  background:#25D366;
+  color:white;
+  min-width:240px;
+  box-shadow:0 10px 24px rgba(37,211,102,.25);
+}
+.price {
+  margin-top:12px;
+  font-size:14px;
+  color:#087b36;
+  font-weight:800;
+}
+.back {
+  display:block;
+  margin:22px auto 0;
+  background:none;
+  border:0;
+  color:#68736c;
+  min-width:auto;
+  padding:8px;
+  font-size:14px;
+}
+@media (max-width:600px) {
+  .screen { padding:12px; }
+  .card { border-radius:22px; }
+  .header { padding:24px 18px 14px; }
+  .question { padding:22px 18px 26px; }
+  .track { gap:10px; }
+  .track img {
+    width:230px;
+    height:290px;
+    border-radius:16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .track { animation:none; }
+}
+</style>
+</head>
+<body>
+
+<main class="screen">
+  <section class="card" id="mainCard">
+    <div id="questionScreen">
+      <header class="header">
+        <span class="badge">CADEIRA DE RODAS</span>
+        <h1>Você tem interesse na cadeira de rodas?</h1>
+        <p class="sub">Confira as fotos e, se tiver interesse, fale comigo pelo WhatsApp.</p>
+      </header>
+
+      <div class="carousel" aria-label="Fotos da cadeira de rodas">
+        <div class="track">
+          <img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.48.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.47.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.39.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.28.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.48.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.47.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.39.webp" alt="Cadeira de rodas" loading="eager">
+<img src="https://ik.imagekit.io/alvoecom/WhatsApp%20Image%202026-09-23%20at%2013.04.28.webp" alt="Cadeira de rodas" loading="eager">
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>Você tem interesse?</h2>
+        <div class="buttons">
+          <button class="yes" onclick="showYes()">SIM, TENHO INTERESSE</button>
+          <button class="no" onclick="showNo()">NÃO</button>
+        </div>
+        <div class="price">Valor: R$ 2.200</div>
+      </div>
+    </div>
+
+    <div class="result" id="yesScreen">
+      <span class="badge">ÓTIMO!</span>
+      <h2>Fale comigo pelo WhatsApp</h2>
+      <p>Estou à disposição para passar mais informações sobre a cadeira de rodas.</p>
+      <a class="wa" href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20na%20cadeira%20de%20rodas%20de%20R%24%202.200." target="_blank" rel="noopener">
+        💬 FALAR PELO WHATSAPP
+      </a>
+      <button class="back" onclick="back()">← Voltar</button>
+    </div>
+
+    <div class="result" id="noScreen">
+      <span class="badge">TUDO BEM!</span>
+      <h2>Obrigado!</h2>
+      <p>Agradecemos pelo seu interesse.</p>
+      <button class="back" onclick="back()">← Voltar</button>
+    </div>
+  </section>
+</main>
+
+<script>
+function hideAll() {
+  document.getElementById('questionScreen').style.display = 'none';
+  document.getElementById('yesScreen').classList.remove('show');
+  document.getElementById('noScreen').classList.remove('show');
+}
+function showYes() {
+  hideAll();
+  document.getElementById('yesScreen').classList.add('show');
+}
+function showNo() {
+  hideAll();
+  document.getElementById('noScreen').classList.add('show');
+}
+function back() {
+  document.getElementById('questionScreen').style.display = '';
+  document.getElementById('yesScreen').classList.remove('show');
+  document.getElementById('noScreen').classList.remove('show');
+}
+</script>
+</body>
+</html>
